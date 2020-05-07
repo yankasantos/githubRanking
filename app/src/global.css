@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font: 300 14px 'Source Code Pro', monospace;
+    background: #063D7E;
+    -webkit-font-smoothing: antialiased;
+}
+
+input, button, textarea{
+    font: 300 18px 'Source Code Pro', monospace;
+}
+
+
+button{
+    cursor: pointer;
+}
+
+form input{
+    
+}
