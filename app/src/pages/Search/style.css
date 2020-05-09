@@ -1,0 +1,43 @@
+.search-container{
+    width: 100%;
+    position: absolute;
+}
+
+.search-container section{
+    position: relative;
+    top: 6rem;
+}
+
+.search-container section form{
+    justify-content: center;
+    display: flex;
+    margin-top: 2rem;
+}
+.search-container section form input{
+    border-radius: 1.5rem;
+    border-style: none;
+    text-align: center;
+    height: 2.25rem;
+    width: 16rem;
+    z-index: 0;
+}
+.searchIcon{
+    color: rgb(201, 130, 0);
+    z-index: 9999;
+    position: relative;
+    right: 2rem;
+    border-style: none;
+    background: none;
+}
+.logo {    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.logo img{
+    width: 120px;
+}
+.logo h1{
+    color: #ECA100;
+}
