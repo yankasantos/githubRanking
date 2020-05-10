@@ -42,4 +42,5 @@ form input{
     font-weight: 900;
     border-radius: 1.5rem;
     border-style: none;
+    min-width:60%;
 }
