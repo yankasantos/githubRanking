@@ -1,10 +1,12 @@
 import React, {useState} from 'react';
 import {Link, useHistory} from 'react-router-dom';
-import { FaGithub,FaStar, FaSearch,FaTrophy } from "react-icons/fa";
+import { FaGithub,FaStar, FaCode, FaSearch,FaTrophy } from "react-icons/fa";
 import './style.css';
 import api from '../../services/api';
 
 import podium from '../../assets/podio.svg';
+import userImage from '../../assets/women.svg';
+import userImage2 from '../../assets/man.svg';
 
 
 export default function UserList(){
@@ -23,7 +25,7 @@ export default function UserList(){
                 <div className="header">
                     <div className="title">
                         <FaTrophy size={24} color={"#FED843"}/>
-                        <label>Repository</label>                        
+                        <label>User</label>                        
                     </div>
                    
                     <form>
@@ -40,29 +42,31 @@ export default function UserList(){
                 </div>
 
                 <div className="list">                
-                    <div className="list-repository">
+                    <div className="list-user">
                         <ul>
                             <li>
                                 <div className="image">
-                                    <FaGithub size={84} color={"#C98200"}/>
+                                    <img src={userImage} alt="imagem do usuário"></img> 
                                 </div>
                                 <div className="info">
-                                    <label>BeTheHero</label>
+                                    <label>Yanka Santos</label>
                                     <div className="github-repository-info">
-                                        <FaStar size={18} color={"#C98200"}/>
-                                        <label>9737707</label>
+                                        <FaCode size={18} color={"#C98200"}></FaCode>
+                                        <label>9845</label>
+                                        <FaGithub size={34} color={"#7D5306"}></FaGithub>
                                     </div>
                                 </div>
                             </li>
                             <li>
                                 <div className="image">
-                                    <FaGithub size={84} color={"#C98200"}/>
+                                <img src={userImage2} alt="imagem do usuário"></img> 
                                 </div>
                                 <div className="info">
-                                    <label>Be-The-Hero</label>
+                                    <label>Renato Lélis</label>
                                     <div className="github-repository-info">
-                                        <FaStar size={18} color={"#C98200"}/>
-                                        <label>9737707</label>
+                                        <FaCode size={18} color={"#C98200"}></FaCode>
+                                        <label>295</label>
+                                        <FaGithub size={34} color={"#7D5306"}></FaGithub>
                                     </div>
                                 </div>
                             </li>

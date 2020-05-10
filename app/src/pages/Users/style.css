@@ -54,21 +54,21 @@
 }
 
 
-.user-list-container .list .list-repository{
+.user-list-container .list .list-user{
     width: 100%;
     justify-content: center;
     align-items: center;
     display: flex;
     justify-items: center;
 }
-.user-list-container .list .list-repository li .info label{
+.user-list-container .list .list-user li .info label{
     color: #C98200;
     font-size: 24px;
     font-weight: 300;
     margin-bottom: 2rem;
 }
 
-.user-list-container .list .list-repository li{
+.user-list-container .list .list-user li{
     display: flex;
     min-width: 18rem;
     min-height: 6rem;
@@ -83,16 +83,18 @@
     margin-bottom: 1rem;
 }
 
-.user-list-container .list .list-repository li  .info{
+.user-list-container .list .list-user li  .info{
     display: flex;
     flex-direction: column;
     position: relative;
+    align-items: flex-end;
 }
 
-.user-list-container .list .list-repository li .info  .github-repository-info label{
+.user-list-container .list .list-user li .info  .github-repository-info label{
     color: #ECA100;
     font-size: 18px;
-    margin-left: 0.25rem;
+    margin-left: 0.5rem;
+    margin-right: 1rem;
     font-weight: 700;
 
 }
