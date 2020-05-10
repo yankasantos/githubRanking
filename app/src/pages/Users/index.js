@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {Link, useHistory} from 'react-router-dom';
-import { FaGithub,FaStar, FaCode, FaSearch,FaTrophy } from "react-icons/fa";
+import { FaGithub,FaStar, FaCode, FaArrowAltCircleLeft, FaSearch,FaTrophy } from "react-icons/fa";
 import './style.css';
 import api from '../../services/api';
 

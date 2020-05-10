@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {Link, useHistory} from 'react-router-dom';
-import { FaGithub,FaStar, FaSearch,FaCode, FaCircle } from "react-icons/fa";
+import { FaGithub,FaStar, FaSearch,FaCode, FaBars, FaTrophy } from "react-icons/fa";
 import './style.css';
 import api from '../../services/api';
 
@@ -23,16 +23,41 @@ export default function Search(){
     return(
         <div className="search-container">
             <section className="form">
+                <div className="menu">
+                    <button><FaBars size={36} color={"#C98200"}/></button>
+                    <div className="list-page">
+                        <ul>
+                            <li>
+                                <Link to="/users">
+                                    <FaTrophy size={14} color={"#FED843"}/>
+                                    <label>User</label> 
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="/repository">
+                                    <FaTrophy size={14} color={"#FED843"}/>
+                                    <label>Repository</label> 
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
                 <div className="logo">
                     <img src={logo} alt=""/>
                     <h1>Github Ranking</h1>                    
                 </div>
                 <form>
                     <div className="filtro-Search">
-                        <input type="radio" name="user" value={user}/>
-                        <label>Users</label>
-                        <input type="radio" name="repository" value={repository}/>
-                        <label>Repository</label>
+                        {/* <input type="radio" name="user" value={user}/> */}
+                        <Link to="/users">
+                            <FaTrophy size={14} color={"#FED843"}/>
+                            <label>User</label> 
+                        </Link>
+                        {/* <input type="radio" name="repository" value={repository}/> */}
+                        <Link to="/repository">
+                            <FaTrophy size={14} color={"#FED843"}/>
+                            <label>Repository</label> 
+                        </Link>
                     </div>
                     <div className="input-search">
                         <input type="text" value={searchInput} onChange={event => setSearchInput(event.target.value)}/>
