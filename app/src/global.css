@@ -16,7 +16,19 @@ body{
 button, textarea{
     font: 300 18px 'Source Code Pro', monospace;
 }
+input[type="radio"]{
+    position: relative;
+    flex-direction: row;
+    font-weight: bold;
+    height: 20px;
+    width: 2rem;
+    background: #C4C4C4;
+    border: 2px solid #fff;
+}
 
+ul{
+    list-style: none;
+}
 
 button{
     cursor: pointer;

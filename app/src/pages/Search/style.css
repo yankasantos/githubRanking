@@ -13,7 +13,44 @@
     display: flex;
     margin-top: 2rem;
 }
-.search-container section form input{
+
+.filtro-Search{
+    width: 100%;
+    display: flex;
+    position: absolute;
+    top: 10rem;
+    flex-direction: row;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.filtro-Search input[type="radio"]{
+    position: relative;
+    flex-direction: row;
+    font-weight: bold;
+    height: 20px;
+    width: 2rem;
+    background: #C4C4C4;
+    border: 2px solid #fff;
+}
+
+.filtro-Search input[type="radio"]:after{
+    background: #C4C4C4;
+    border: 2px solid #fff;
+}
+.filtro-Search input[type="radio"]:checked:after{
+    background: #ECA100;
+    border: 2px solid #ECA100;
+}
+
+.filtro-Search label{
+    color: #C4C4C4;
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 1rem;
+}
+.search-container section form input[type="text"]{
     border-radius: 1.5rem;
     border-style: none;
     text-align: center;
@@ -40,4 +77,68 @@
 }
 .logo h1{
     color: #ECA100;
+}
+
+.input-search{
+    display: flex;
+    position: relative;
+    top: 2rem;
+}
+
+.list-users{
+    width: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    top: 18rem;
+}
+
+.list-users ul li{
+    border-radius: 0.5rem;
+    background: #F8FAFC;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+.list-users ul li .image img{
+    width: 74px;
+}
+
+.list-users ul li .info{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    width: 12rem;
+}
+
+.list-users ul li .info label{
+    color: #C98200;
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.list-users ul li .info .github-user-info{
+    position: relative;
+    top: 1.25rem;
+}
+
+.list-users ul li .info .github-user-info label{
+    font-size: 18px;
+    margin-right: 1rem;
+    margin-left: 0.5rem;
+    font-weight: 900;
+}
+
+
+.list-users .ilustration{
+    width: 100%;
+}
+
+.ilustration img{
+    width: 200px;
+    float: right;
 }
