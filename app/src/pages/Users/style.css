@@ -44,3 +44,60 @@
 .user-list-container .podium img{
     max-width: 150px;
 }
+
+.user-list-container .list{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    top: 28rem;
+    flex-direction: column;
+}
+
+
+.user-list-container .list .list-repository{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    justify-items: center;
+}
+.user-list-container .list .list-repository li .info label{
+    color: #C98200;
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+.user-list-container .list .list-repository li{
+    display: flex;
+    min-width: 18rem;
+    min-height: 6rem;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    color: #ECA100;
+    background: #F8FAFC;
+
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+}
+
+
+
+
+.user-list-container .list .list-repository li  .info{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.user-list-container .list .list-repository li .info  .github-repository-info label{
+    color: #ECA100;
+    font-size: 18px;
+    margin-left: 0.25rem;
+    font-weight: 700;
+
+    
+
+}

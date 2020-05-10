@@ -4,7 +4,8 @@ import { FaGithub,FaStar, FaSearch,FaTrophy } from "react-icons/fa";
 import './style.css';
 import api from '../../services/api';
 
-import podium from '../../assets/podio.svg'
+import podium from '../../assets/podio.svg';
+
 
 export default function UserList(){
 
@@ -36,6 +37,37 @@ export default function UserList(){
                 </div>
                 <div className="podium">
                     <img src={podium} alt="podio com cada posição ocupada por uma estrela"/>
+                </div>
+
+                <div className="list">                
+                    <div className="list-repository">
+                        <ul>
+                            <li>
+                                <div className="image">
+                                    <FaGithub size={84} color={"#C98200"}/>
+                                </div>
+                                <div className="info">
+                                    <label>BeTheHero</label>
+                                    <div className="github-repository-info">
+                                        <FaStar size={18} color={"#C98200"}/>
+                                        <label>9737707</label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div className="image">
+                                    <FaGithub size={84} color={"#C98200"}/>
+                                </div>
+                                <div className="info">
+                                    <label>Be-The-Hero</label>
+                                    <div className="github-repository-info">
+                                        <FaStar size={18} color={"#C98200"}/>
+                                        <label>9737707</label>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </section>
         </div>
