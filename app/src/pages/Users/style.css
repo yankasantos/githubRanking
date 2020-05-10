@@ -1,0 +1,100 @@
+.user-list-container{
+    position: absolute;
+    width: 100%;
+}
+
+.user-list-container .header{
+    width: 100%;
+    padding: 2rem;
+    position: relative;
+    top: 4rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.user-list-container .header label{
+    color: #D5D5D5;
+    font-size: 24px;
+    font-weight: 700;
+    margin-left: 0.5rem;
+}
+
+.user-list-container .header form{
+    width: 100%;
+    position: relative;
+    top: 2rem;
+    height: 4rem;
+    justify-content: center;
+}
+
+.user-list-container .header form .input-search{
+    height: 2.85rem;
+    top: 0rem;
+    justify-content: center;
+}
+
+.user-list-container .podium{
+    display: flex;
+    position: relative;
+    top: 6rem;
+    justify-content: center;
+}
+
+.user-list-container .podium img{
+    max-width: 150px;
+}
+
+.user-list-container .list{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    top: 28rem;
+    flex-direction: column;
+}
+
+
+.user-list-container .list .list-user{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    justify-items: center;
+}
+.user-list-container .list .list-user li .info label{
+    color: #C98200;
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+.user-list-container .list .list-user li{
+    display: flex;
+    min-width: 18rem;
+    min-height: 6rem;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    color: #ECA100;
+    background: #F8FAFC;
+
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+}
+
+.user-list-container .list .list-user li  .info{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: flex-end;
+}
+
+.user-list-container .list .list-user li .info  .github-repository-info label{
+    color: #ECA100;
+    font-size: 18px;
+    margin-left: 0.5rem;
+    margin-right: 1rem;
+    font-weight: 700;
+
+}

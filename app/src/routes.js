@@ -11,7 +11,7 @@ export default function routes(){
         <BrowserRouter>
             <Switch>
                 <Route path='/' exact component={Search}/>
-                {/* <Route path='/repository'component={}/>*/}
+                <Route path='/repository'component={Repository}/>
                 <Route path='/users'component={User}/>
             </Switch>
         </BrowserRouter>
