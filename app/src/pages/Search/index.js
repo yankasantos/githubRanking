@@ -8,6 +8,7 @@ import logo from '../../assets/github.svg';
 import userImage from '../../assets/women.svg';
 import userImage2 from '../../assets/women-2.svg';
 import ilustration from '../../assets/popularity.svg';
+import repositoryImage from '../../assets/computer.svg';
 
 export default function Search(){
     const [searchInput, setSearchInput] = useState('');
@@ -40,39 +41,74 @@ export default function Search(){
                         </button>
                     </div>
                 </form>
-                <div className="list-users">
-                    <ul>
-                        <li>
-                            <div className="image">
-                                <img src={userImage} alt="imagem do usuário"></img> 
-                            </div>
-                            <div className="info">
-                                <label>Yanka Santos</label>
-                                <div className="github-user-info">
-                                    <FaCode size={18} color={"#C98200"}></FaCode>
-                                    <label>97925</label>
-                                    <FaGithub size={34} color={"#7D5306"}></FaGithub>
+                <div className="list">
+                    <div className="list-users">
+                        <ul>
+                            <li>
+                                <div className="image">
+                                    <img src={userImage} alt="imagem do usuário"></img> 
                                 </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div className="image">
-                                <img src={userImage2} alt="imagem do usuário"></img> 
-                            </div>
-                            <div className="info">
-                                <label>Yanka Santos</label>
-                                <div className="github-user-info">
-                                    <FaCode size={18} color={"#C98200"}></FaCode>
-                                    <label>1295</label>
-                                    <FaGithub size={34} color={"#7D5306"}></FaGithub>
+                                <div className="info">
+                                    <label>Yanka Santos</label>
+                                    <div className="github-user-info">
+                                        <FaCode size={18} color={"#C98200"}></FaCode>
+                                        <label>97925</label>
+                                        <FaGithub size={34} color={"#7D5306"}></FaGithub>
+                                    </div>
                                 </div>
-                            </div>
-                        </li>
-                    </ul>
+                            </li>
+                            <li>
+                                <div className="image">
+                                    <img src={userImage2} alt="imagem do usuário"></img> 
+                                </div>
+                                <div className="info">
+                                    <label>Yanka Santos</label>
+                                    <div className="github-user-info">
+                                        <FaCode size={18} color={"#C98200"}></FaCode>
+                                        <label>1295</label>
+                                        <FaGithub size={34} color={"#7D5306"}></FaGithub>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div className="list-repository">
+                         <ul>
+                            <li>
+                                <div className="image">
+                                    <img src={repositoryImage} alt="imagem do usuário"></img> 
+                                </div>
+                                <div className="info">
+                                    <label>BeTheHero</label>
+                                    <div className="github-user-info">
+                                        <FaStar size={18} color={"#C98200"}></FaStar>
+                                        <label>53902</label>
+                                        <FaGithub size={34} color={"#7D5306"}></FaGithub>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div className="image">
+                                    <img src={repositoryImage} alt="imagem do usuário"></img> 
+                                </div>
+                                <div className="info">
+                                    <label>Be-The-Hero</label>
+                                    <div className="github-user-info">
+                                        <FaStar size={18} color={"#C98200"}></FaStar>
+                                        <label>4482</label>
+                                        <FaGithub size={34} color={"#7D5306"}></FaGithub>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
                     <div className="ilustration">
                         <img src={ilustration} alt="gráfico mostrando a estrela subindo"/>
                     </div>
                 </div>            
+
             </section>
         </div>
     );

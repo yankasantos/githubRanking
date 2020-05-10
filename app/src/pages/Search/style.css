@@ -85,7 +85,7 @@
     top: 2rem;
 }
 
-.list-users{
+.search-container .list{
     width: 100%;
     position: absolute;
     display: flex;
@@ -95,7 +95,7 @@
     top: 18rem;
 }
 
-.list-users ul li{
+.search-container .list ul li{
     border-radius: 0.5rem;
     background: #F8FAFC;
     padding: 1rem;
@@ -104,29 +104,29 @@
     margin-bottom: 1rem;
     cursor: pointer;
 }
-.list-users ul li .image img{
+.search-container .list ul li .image img{
     width: 74px;
 }
 
-.list-users ul li .info{
+.search-container .list ul li .info{
     display: flex;
     align-items: flex-end;
     flex-direction: column;
     width: 12rem;
 }
 
-.list-users ul li .info label{
+.search-container .list ul li .info label{
     color: #C98200;
     font-size: 24px;
     font-weight: 300;
 }
 
-.list-users ul li .info .github-user-info{
+.search-container .list ul li .info .github-user-info{
     position: relative;
     top: 1.25rem;
 }
 
-.list-users ul li .info .github-user-info label{
+.search-container .list ul li .info .github-user-info label{
     font-size: 18px;
     margin-right: 1rem;
     margin-left: 0.5rem;
@@ -134,7 +134,7 @@
 }
 
 
-.list-users .ilustration{
+.search-container .list .ilustration{
     width: 100%;
 }
 
