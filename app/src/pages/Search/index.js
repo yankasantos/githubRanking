@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {Link, useHistory} from 'react-router-dom';
 import { FaGithub,FaStar, FaSearch,FaCode, FaBars, FaTrophy } from "react-icons/fa";
 import './style.css';
@@ -13,9 +13,13 @@ import repositoryImage from '../../assets/computer.svg';
 export default function Search(){
     const [searchInput, setSearchInput] = useState('');
     const history = useHistory('');
-    const [repository, setRepository] = useState('');
-    const [user, setUser] = useState('');
+    
+
+    // useEffect(() => {request, response}, []);
+
+    
     async function handleSearch(event){
+        event.preventDefault();
 
     }
 

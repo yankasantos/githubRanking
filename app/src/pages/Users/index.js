@@ -12,23 +12,43 @@ import userImage2 from '../../assets/man.svg';
 export default function UserList(){
 
     const [searchInput, setSearchInput] = useState('');
-    // const history = useHistory('');
-    // async function handleUserList(event){
+    const [userList, setUserList] = useState('');
+    const urlBack = '/';
+
+    async function handleUserList(event){
+        event.preventDefault();
+        
+        try{
+            await api.get(`search/users?q=${searchInput}&sort=followers&order=desc`).then(response =>{
+               const userList = response.data;
+               setUserList(userList);
+
+            });
 
 
-    //     history.push();
-    // }
+        }catch(error){
+            console.log("erro ao fazer a requisição");
+        }
+
+    }
+
+
 
     return(
         <div className="user-list-container">
             <section>
                 <div className="header">
+                    {/* <div className="back">
+                        <Link className="back-link" to={urlBack}>
+                            <FaArrowAltCircleLeft  size={16} color="#E02041"/>
+                        </Link>
+                    </div> */}
                     <div className="title">
                         <FaTrophy size={24} color={"#FED843"}/>
                         <label>User</label>                        
                     </div>
                    
-                    <form>
+                    <form onSubmit={handleUserList}>
                         <div className="input-search">
                             <input type="text" value={searchInput} onChange={event => setSearchInput(event.target.value)}/>
                             <button type="submit" className="searchIcon">
@@ -40,39 +60,31 @@ export default function UserList(){
                 <div className="podium">
                     <img src={podium} alt="podio com cada posição ocupada por uma estrela"/>
                 </div>
+                {userList && 
+                    <div className="list">                
+                        <div className="list-user">
+                            <ul>
+                                {userList.items.map(user => (
+                                    
+                                    <li key={user.id}>
+                                        <div className="image">
+                                            <img src={user.avatar_url} alt="imagem do usuário"></img> 
+                                        </div>
+                                        <div className="info">
 
-                <div className="list">                
-                    <div className="list-user">
-                        <ul>
-                            <li>
-                                <div className="image">
-                                    <img src={userImage} alt="imagem do usuário"></img> 
-                                </div>
-                                <div className="info">
-                                    <label>Yanka Santos</label>
-                                    <div className="github-repository-info">
-                                        <FaCode size={18} color={"#C98200"}></FaCode>
-                                        <label>9845</label>
-                                        <FaGithub size={34} color={"#7D5306"}></FaGithub>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div className="image">
-                                <img src={userImage2} alt="imagem do usuário"></img> 
-                                </div>
-                                <div className="info">
-                                    <label>Renato Lélis</label>
-                                    <div className="github-repository-info">
-                                        <FaCode size={18} color={"#C98200"}></FaCode>
-                                        <label>295</label>
-                                        <FaGithub size={34} color={"#7D5306"}></FaGithub>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
+                                            <a href={user.html_url}><label>{user.login}</label></a>
+                                            <div className="github-repository-info">
+                                                <FaCode size={18} color={"#C98200"}></FaCode>
+                                                <label>{user.score}</label>
+                                                <FaGithub size={34} color={"#7D5306"}></FaGithub>
+                                            </div>
+                                        </div>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
                     </div>
-                </div>
+                }   
             </section>
         </div>
 
