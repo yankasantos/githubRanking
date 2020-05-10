@@ -13,15 +13,33 @@ body{
     -webkit-font-smoothing: antialiased;
 }
 
-input, button, textarea{
+button, textarea{
     font: 300 18px 'Source Code Pro', monospace;
 }
+input[type="radio"]{
+    position: relative;
+    flex-direction: row;
+    font-weight: bold;
+    height: 20px;
+    width: 2rem;
+    background: #C4C4C4;
+    border: 2px solid #fff;
+}
 
+ul{
+    list-style: none;
+}
 
 button{
     cursor: pointer;
 }
 
 form input{
-    
+    padding: 1rem;
+    color: #1E6BC9;
+    font-size: 24px;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 900;
+    border-radius: 1.5rem;
+    border-style: none;
 }
