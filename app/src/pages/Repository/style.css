@@ -55,11 +55,8 @@
 
 
 .repository-list-container .list .list-repository{
-    width: 100%;
     justify-content: center;
-    align-items: center;
     display: flex;
-    justify-items: center;
 }
 .repository-list-container .list .list-repository li .info label{
     color: #C98200;
@@ -70,17 +67,16 @@
 
 .repository-list-container .list .list-repository li{
     display: flex;
-    min-width: 18rem;
     min-height: 6rem;
     padding: 1rem;
     border-radius: 1.5rem;
     color: #ECA100;
     background: #F8FAFC;
-
     align-items: center;
     flex-direction: row;
-    justify-content: space-around;
     margin-bottom: 1rem;
+    max-width: 20rem;
+    position: relative;
 }
 
 .repository-list-container .list .list-repository li  .info{
@@ -88,6 +84,9 @@
     flex-direction: column;
     position: relative;
     align-items: flex-end;
+    flex-wrap: wrap;
+    width: 50%;
+    text-align: end;
 }
 
 .repository-list-container .list .list-repository li .info  .github-repository-info label{
