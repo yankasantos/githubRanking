@@ -8,6 +8,48 @@
     top: 6rem;
 }
 
+.search-container section .menu{
+    position: absolute;
+    top: -5rem;
+    display: flex;
+    margin-left: 2rem;
+}
+.search-container section .menu button{
+    background: none;
+    border-style: none;
+    transition: opacity 0.8s;
+}
+.search-container section .menu button:hover{
+    border: 1px solid #C98200;
+    padding: 0.25rem;
+    border-radius: 0.5rem;
+    opacity: 0.8;
+}
+.search-container section .menu button:hover  + .list-page{
+    visibility: visible;
+    display: block;
+    transition: opacity 0.8s;
+}
+.search-container section .menu .list-page{
+    background: #F8FAFC;
+    visibility: visible;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    top: 2.5rem;
+    position: absolute;
+    left: 0rem;
+    min-width: 200px;
+    visibility: hidden;
+    display: none;
+}
+
+.search-container section .menu .list-page li{
+    margin-bottom: 1rem;
+    font-size: 16px;
+}
+.search-container section .menu .list-page li svg{
+    margin-right: 0.25rem;
+}
 .search-container section form{
     justify-content: center;
     display: flex;
@@ -49,6 +91,7 @@
     font-size: 20px;
     font-weight: bold;
     margin-right: 1rem;
+    cursor: pointer;
 }
 .search-container section form input[type="text"]{
     border-radius: 1.5rem;

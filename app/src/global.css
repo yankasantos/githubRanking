@@ -30,8 +30,40 @@ ul{
     list-style: none;
 }
 
+li{
+    transition: filter 0.2s;
+}
+
+li:hover{
+    cursor: pointer;
+    /* border: 1px solid #F8FAFC; */
+    filter: brightness(90%);
+}
+
+li img{
+    width: 126px;
+    border-radius: 50%;
+    margin-right: 3rem;
+}
+
+svg{
+    margin-right: 0.5rem;
+}
+
+a{
+    text-decoration: none;
+    color: #1E6BC9;
+    font-weight: 700;
+    cursor: pointer;
+}
+
 button{
     cursor: pointer;
+    transition: filter 0.2s;
+}
+
+button:hover{
+    filter: brightness(90%);
 }
 
 form input{

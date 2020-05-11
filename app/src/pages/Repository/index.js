@@ -10,12 +10,25 @@ import podium from '../../assets/podio.svg';
 export default function RepositoryList(){
 
     const [searchInput, setSearchInput] = useState('');
-    // const history = useHistory('');
-    // async function handleUserList(event){
+    const [resopitoryList, setResopitoryList] = useState('');
 
+   
 
-    //     history.push();
-    // }
+    async function handleRepositoryList(event){
+        event.preventDefault();
+        
+        try{
+            
+            await api.get(`search/repositories?q=${searchInput}&sort=stars&order=desc`).then(response =>{
+                const resopitoryList = response.data;
+                setResopitoryList(resopitoryList);
+            });
+
+        }catch(error){
+            console.log("erro ao fazer a requisição");
+        }
+
+    }
 
     return(
         <div className="repository-list-container">
@@ -26,7 +39,7 @@ export default function RepositoryList(){
                         <label>Repository</label>                        
                     </div>
                    
-                    <form>
+                    <form onSubmit={handleRepositoryList}>
                         <div className="input-search">
                             <input type="text" value={searchInput} onChange={event => setSearchInput(event.target.value)}/>
                             <button type="submit" className="searchIcon">
@@ -37,38 +50,32 @@ export default function RepositoryList(){
                 </div>
                 <div className="podium">
                     <img src={podium} alt="podio com cada posição ocupada por uma estrela"/>
-                </div>
-
-                <div className="list">                
-                    <div className="list-repository">
-                        <ul>
-                            <li>
-                                <div className="image">
-                                    <FaGithub size={84} color={"#C98200"}/>
-                                </div>
-                                <div className="info">
-                                    <label>BeTheHero</label>
-                                    <div className="github-repository-info">
-                                        <FaStar size={18} color={"#C98200"}/>
-                                        <label>9737707</label>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div className="image">
-                                    <FaGithub size={84} color={"#C98200"}/>
-                                </div>
-                                <div className="info">
-                                    <label>Be-The-Hero</label>
-                                    <div className="github-repository-info">
-                                        <FaStar size={18} color={"#C98200"}/>
-                                        <label>9737707</label>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
+                </div>                            
+                    
+                {resopitoryList && 
+                    <div className="list">  
+                        <div className="list-repository">
+                            <ul>
+                                {resopitoryList.items.map(repository => (
+                                        
+                                    <li key={repository.id}>
+                                        <div className="image">
+                                            <FaGithub size={84} color={"#C98200"}/>
+                                        </div>
+                                        <div className="info">
+                                            <label>{repository.name}</label>
+                                            <div className="github-repository-info">
+                                                <FaStar size={18} color={"#C98200"}/>
+                                                <label>{repository.stargazers_count}</label>
+                                            </div>
+                                        </div>
+                                    </li>
+                                ))}
+                            </ul>                           
+                        </div>
                     </div>
-                </div>
+                
+                }
             </section>
         </div>
 

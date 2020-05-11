@@ -51,11 +51,11 @@
     display: flex;
     top: 28rem;
     flex-direction: column;
+    align-items: center;
 }
 
 
 .user-list-container .list .list-user{
-    width: 100%;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -70,20 +70,31 @@
 
 .user-list-container .list .list-user li{
     display: flex;
-    min-width: 18rem;
     min-height: 6rem;
     padding: 1rem;
     border-radius: 1.5rem;
     color: #ECA100;
     background: #F8FAFC;
-
     align-items: center;
     flex-direction: row;
     justify-content: space-around;
     margin-bottom: 1rem;
+    max-width: 318px;
 }
 
-.user-list-container .list .list-user li  .info{
+.user-list-container .list .list-user li .image{
+    position: relative;
+    align-content: flex-start;
+    float: left;
+}
+.user-list-container .list .list-user li img{
+    width: 86px;
+    border-radius: 50%;
+    margin-right: 2px;
+    position: relative;
+}
+
+.user-list-container .list .list-user li .info{
     display: flex;
     flex-direction: column;
     position: relative;
