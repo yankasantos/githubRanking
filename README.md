@@ -1,7 +1,7 @@
 # githubRanking
 
 
-![Alt](./front-end/app/src/assets/github.svg"logo github amarelo")
+![Alt](./app/src/assets/github.svg)
 
 
 
