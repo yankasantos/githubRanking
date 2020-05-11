@@ -137,7 +137,10 @@
     flex-direction: column;
     top: 18rem;
 }
-
+.search-container .list .list-repository,
+.search-container .list .list-users{
+    z-index: 2;
+}
 .search-container .list ul li{
     border-radius: 0.5rem;
     background: #F8FAFC;
@@ -146,6 +149,7 @@
     flex-direction: row;
     margin-bottom: 1rem;
     cursor: pointer;
+    
 }
 .search-container .list ul li .image img{
     width: 74px;
@@ -179,6 +183,9 @@
 
 .search-container .list .ilustration{
     width: 100%;
+    position: fixed;
+    bottom: 0rem;
+    z-index: 0;
 }
 
 .ilustration img{
