@@ -13,6 +13,13 @@ o ranqueamento dos usuários é referenciado pelo score fornecido pela API, de f
 
 [Protótipo do projeto](https://www.figma.com/file/pSPYZ54UDt8YyPhvkCAhol/GithubRanking?node-id=11%3A3 "figma - Github Ranking")
 
+## Navegação das telas
+
+> * Página de busca inicial a url é  http://localhost:3000/
+> * Para acessar a tela de busca por usuário você pode clicar no nome "User" que tem em cima da barra onde você digita o que quer buscar ou você digita no browser http://localhost:3000/users
+> * Para acessar a tela de busca por usuário você pode clicar no nome "Repository" que tem em cima da barra onde você digita o que quer buscar ou você digita no browser http://localhost:3000/repository
+
+
 ## As funcionalidades que foram desenvolvidas:
 
 > *  Tela inicial, onde pode ser feita busca por usuário e repositórios;
