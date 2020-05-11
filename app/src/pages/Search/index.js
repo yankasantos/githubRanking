@@ -12,14 +12,31 @@ import repositoryImage from '../../assets/computer.svg';
 
 export default function Search(){
     const [searchInput, setSearchInput] = useState('');
+    const [userList, setUserList] = useState('');
+    const [resopitoryList, setResopitoryList] = useState('');
+
+    
     const history = useHistory('');
-    
+   
 
-    // useEffect(() => {request, response}, []);
-
-    
-    async function handleSearch(event){
+    async function handleSearchList(event){
         event.preventDefault();
+        
+        try{
+            await api.get(`search/users?q=${searchInput}&sort=followers&order=desc`).then(response =>{
+               const userList = response.data;
+               setUserList(userList);
+
+            });
+
+            await api.get(`search/repositories?q=${searchInput}&sort=stars&order=desc`).then(response =>{
+                const resopitoryList = response.data;
+                setResopitoryList(resopitoryList);
+            });
+
+        }catch(error){
+            console.log("erro ao fazer a requisição");
+        }
 
     }
 
@@ -50,7 +67,7 @@ export default function Search(){
                     <img src={logo} alt=""/>
                     <h1>Github Ranking</h1>                    
                 </div>
-                <form>
+                <form onSubmit={handleSearchList}>
                     <div className="filtro-Search">
                         {/* <input type="radio" name="user" value={user}/> */}
                         <Link to="/users">
@@ -71,72 +88,56 @@ export default function Search(){
                     </div>
                 </form>
                 <div className="list">
-                    <div className="list-users">
-                        <ul>
-                            <li>
-                                <div className="image">
-                                    <img src={userImage} alt="imagem do usuário"></img> 
-                                </div>
-                                <div className="info">
-                                    <label>Yanka Santos</label>
-                                    <div className="github-user-info">
-                                        <FaCode size={18} color={"#C98200"}></FaCode>
-                                        <label>97925</label>
-                                        <FaGithub size={34} color={"#7D5306"}></FaGithub>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div className="image">
-                                    <img src={userImage2} alt="imagem do usuário"></img> 
-                                </div>
-                                <div className="info">
-                                    <label>Yanka Santos</label>
-                                    <div className="github-user-info">
-                                        <FaCode size={18} color={"#C98200"}></FaCode>
-                                        <label>1295</label>
-                                        <FaGithub size={34} color={"#7D5306"}></FaGithub>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
+                    {userList && 
+                        <div className="list-users">
+                            <ul>
+                                {userList.items.map(user => (                                    
+                                    <li key={user.id}>                                    
+                                        <div className="image">
+                                            <img src={user.avatar_url} alt="imagem do usuário"></img> 
+                                        </div>
+                                        <div className="info">
+                                        <a href={user.html_url}><label>{user.login}</label></a>
+                                            <div className="github-user-info">
+                                                <FaCode size={18} color={"#C98200"}></FaCode>
+                                                <label>{user.score}</label>
+                                                <FaGithub size={34} color={"#7D5306"}></FaGithub>
+                                            </div>
+                                        </div>
+                                    </li>                                    
+                                ))}
+                            </ul>
+                        </div>
+                    }
                     
-                    <div className="list-repository">
-                         <ul>
-                            <li>
-                                <div className="image">
-                                    <img src={repositoryImage} alt="imagem do usuário"></img> 
-                                </div>
-                                <div className="info">
-                                    <label>BeTheHero</label>
-                                    <div className="github-user-info">
-                                        <FaStar size={18} color={"#C98200"}></FaStar>
-                                        <label>53902</label>
-                                        <FaGithub size={34} color={"#7D5306"}></FaGithub>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div className="image">
-                                    <img src={repositoryImage} alt="imagem do usuário"></img> 
-                                </div>
-                                <div className="info">
-                                    <label>Be-The-Hero</label>
-                                    <div className="github-user-info">
-                                        <FaStar size={18} color={"#C98200"}></FaStar>
-                                        <label>4482</label>
-                                        <FaGithub size={34} color={"#7D5306"}></FaGithub>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-
-                    </div>
+                    {resopitoryList && 
+                        <div className="list-repository">
+                            <ul>
+                                {resopitoryList.items.map(repository => (
+                                        
+                                    <li key={repository.id}>
+                            
+                                        <div className="image">
+                                            <img src={repositoryImage} alt="imagem da nuvem sincronizando com setas formando um circulo"></img> 
+                                        </div>
+                                        <div className="info">
+                                            <label>{repository.name}</label>
+                                            <div className="github-user-info">
+                                                <FaStar size={18} color={"#C98200"}></FaStar>
+                                                <label>{repository.stargazers_count}</label>
+                                                <FaGithub size={34} color={"#7D5306"}></FaGithub>
+                                            </div>
+                                        </div>
+                                    </li>
+                                 ))}                            
+                            </ul>
+                        </div>
+                    }
                     <div className="ilustration">
                         <img src={ilustration} alt="gráfico mostrando a estrela subindo"/>
                     </div>
-                </div>            
+                </div> 
+                            
 
             </section>
         </div>

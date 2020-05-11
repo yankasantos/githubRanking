@@ -82,10 +82,15 @@
     max-width: 318px;
 }
 
+.user-list-container .list .list-user li .image{
+    position: relative;
+    align-content: flex-start;
+    float: left;
+}
 .user-list-container .list .list-user li img{
     width: 86px;
     border-radius: 50%;
-    margin-right: 3rem;
+    margin-right: 2px;
     position: relative;
 }
 

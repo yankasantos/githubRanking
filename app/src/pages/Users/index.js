@@ -5,8 +5,7 @@ import './style.css';
 import api from '../../services/api';
 
 import podium from '../../assets/podio.svg';
-import userImage from '../../assets/women.svg';
-import userImage2 from '../../assets/man.svg';
+
 
 
 export default function UserList(){
@@ -14,6 +13,7 @@ export default function UserList(){
     const [searchInput, setSearchInput] = useState('');
     const [userList, setUserList] = useState('');
     const urlBack = '/';
+   
 
     async function handleUserList(event){
         event.preventDefault();
@@ -24,7 +24,6 @@ export default function UserList(){
                setUserList(userList);
 
             });
-
 
         }catch(error){
             console.log("erro ao fazer a requisição");
@@ -38,11 +37,11 @@ export default function UserList(){
         <div className="user-list-container">
             <section>
                 <div className="header">
-                    {/* <div className="back">
-                        <Link className="back-link" to={urlBack}>
+                    <div className="back">
+                        {/* <Link className="back-link" to='/'>
                             <FaArrowAltCircleLeft  size={16} color="#E02041"/>
-                        </Link>
-                    </div> */}
+                        </Link> */}
+                    </div>
                     <div className="title">
                         <FaTrophy size={24} color={"#FED843"}/>
                         <label>User</label>                        
