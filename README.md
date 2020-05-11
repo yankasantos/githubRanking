@@ -1,7 +1,7 @@
 # githubRanking
 
 
-![Alt](./app/src/assets/github.svg)
+![Alt](./app/src/assets/Github_Ranking.gif)
 
 
 
