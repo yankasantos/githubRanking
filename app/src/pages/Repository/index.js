@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import {Link, useHistory} from 'react-router-dom';
 import { FaGithub,FaStar, FaSearch,FaTrophy } from "react-icons/fa";
 import './style.css';
 import api from '../../services/api';

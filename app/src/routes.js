@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch} from 'react-router-dom';
 
-
 import Search from './pages/Search';
 import Repository from './pages/Repository';
 import User from './pages/Users';

@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
-import {Link, useHistory} from 'react-router-dom';
-import { FaGithub,FaStar, FaCode, FaArrowAltCircleLeft, FaSearch,FaTrophy } from "react-icons/fa";
+import { FaGithub, FaCode, FaSearch,FaTrophy } from "react-icons/fa";
 import './style.css';
 import api from '../../services/api';
 
@@ -12,8 +11,6 @@ export default function UserList(){
 
     const [searchInput, setSearchInput] = useState('');
     const [userList, setUserList] = useState('');
-    const urlBack = '/';
-   
 
     async function handleUserList(event){
         event.preventDefault();

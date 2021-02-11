@@ -1,12 +1,10 @@
-import React, {useState, useEffect} from 'react';
-import {Link, useHistory} from 'react-router-dom';
+import React, {useState} from 'react';
+import {Link} from 'react-router-dom';
 import { FaGithub,FaStar, FaSearch,FaCode, FaBars, FaTrophy } from "react-icons/fa";
 import './style.css';
 import api from '../../services/api';
 
 import logo from '../../assets/github.svg';
-import userImage from '../../assets/women.svg';
-import userImage2 from '../../assets/women-2.svg';
 import ilustration from '../../assets/popularity.svg';
 import repositoryImage from '../../assets/computer.svg';
 
@@ -14,10 +12,6 @@ export default function Search(){
     const [searchInput, setSearchInput] = useState('');
     const [userList, setUserList] = useState('');
     const [resopitoryList, setResopitoryList] = useState('');
-
-    
-    const history = useHistory('');
-   
 
     async function handleSearchList(event){
         event.preventDefault();
